@@ -13,7 +13,7 @@ class HomeNoteView extends StatelessWidget {
         padding: const EdgeInsets.symmetric(horizontal: 24),
         child: Column(children: [
           SizedBox(height: 50,),
-          CustomAppBar(onPressed: () {  },),
+          CustomAppBar(onPressed: () {  },iconData: Icons.search,text: 'Notes',),
          Expanded(child: customListViewBuilder())
         ],),
       ),
