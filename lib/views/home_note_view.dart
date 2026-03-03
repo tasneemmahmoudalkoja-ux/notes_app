@@ -18,7 +18,11 @@ class HomeNoteView extends StatelessWidget {
         ],),
       ),
       floatingActionButton: FloatingActionButton(onPressed: (){
-        showModalBottomSheet(context: context, builder: (context){
+        showModalBottomSheet(
+          shape: RoundedRectangleBorder(
+            borderRadius: BorderRadius.circular(25)
+          ),
+          context: context, builder: (context){
           return CustomAddBottomSheet();
         });
       },child: Icon(Icons.add,),backgroundColor: Colors.black.withOpacity(.6),),
