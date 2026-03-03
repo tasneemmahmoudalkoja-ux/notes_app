@@ -7,11 +7,15 @@ class CustomAddBottomSheet extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.symmetric(vertical: 16,horizontal: 20),
+      padding: const EdgeInsets.symmetric(vertical: 20,horizontal: 20),
       child: Column(
         
         children: [
-        CustomTextField(hintText: 'Text Title',)
+          
+        CustomTextField(hintText: 'Text Title', ),
+                  SizedBox(height: 24,),
+
+         CustomTextField(hintText: 'Content', maxLines: 5,),
       ],),
     );
   }
