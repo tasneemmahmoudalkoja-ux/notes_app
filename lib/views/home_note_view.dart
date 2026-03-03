@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:notes_app/widgets/custom_add_bottom_sheet.dart';
 import 'package:notes_app/widgets/custom_app_bar.dart';
 import 'package:notes_app/widgets/custom_list_view.dart';
 
@@ -16,7 +17,11 @@ class HomeNoteView extends StatelessWidget {
          Expanded(child: customListViewBuilder())
         ],),
       ),
-      floatingActionButton: FloatingActionButton(onPressed: (){},child: Icon(Icons.add,),backgroundColor: Colors.black.withOpacity(.6),),
+      floatingActionButton: FloatingActionButton(onPressed: (){
+        showModalBottomSheet(context: context, builder: (context){
+          return CustomAddBottomSheet();
+        });
+      },child: Icon(Icons.add,),backgroundColor: Colors.black.withOpacity(.6),),
     );
   }
 }
