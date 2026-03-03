@@ -1,5 +1,6 @@
 
 import 'package:flutter/material.dart';
+import 'package:notes_app/views/home_note_view.dart';
 
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
@@ -10,9 +11,9 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Flutter Demo',
       theme: ThemeData(
-         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
+         brightness: Brightness.dark,
       ),
-      home:Scaffold(),
+      home:HomeNoteView(),
     );
   }
 }
